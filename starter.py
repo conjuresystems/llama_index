@@ -1,8 +1,8 @@
-# import logging
-# import sys
+import logging
+import sys
 
-# logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-# logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 import os.path
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage
 
@@ -20,5 +20,5 @@ else:
 
 # either way we can now query the index
 query_engine = index.as_query_engine()
-response = query_engine.query("What did the author do growing up?")
+response = query_engine.query("What are the acupoints for wind heat attack?")
 print(response)
